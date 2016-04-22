@@ -1,0 +1,13 @@
+{
+  "name": "ebussola/controlmybudget",
+  "authors": [
+    {
+      "name": "Leonardo Shinagawa",
+      "email": "leonardo@ebussola.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "ebussola/goalr": "~1.0"
+  }
+}

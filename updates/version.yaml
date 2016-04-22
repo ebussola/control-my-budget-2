@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table ebussola_controlmybudget_purchases'
+    - builder_table_create_ebussola_controlmybudget_purchases.php
+1.0.3:
+    - 'Created table ebussola_controlmybudget_monthly_goal'
+    - builder_table_create_ebussola_controlmybudget_monthly_goal.php
+1.0.4:
+    - 'Created table ebussola_controlmybudget_period_goal'
+    - builder_table_create_ebussola_controlmybudget_period_goal.php

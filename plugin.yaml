@@ -1,0 +1,6 @@
+plugin:
+    name: 'ebussola.controlmybudget::lang.plugin.name'
+    description: 'ebussola.controlmybudget::lang.plugin.description'
+    author: eBussola
+    icon: oc-icon-money
+    homepage: ''
