@@ -4,3 +4,21 @@ plugin:
     author: eBussola
     icon: oc-icon-money
     homepage: ''
+permissions:
+    cmb.purchase:
+        tab: test
+        label: Bla
+navigation:
+    cmb:
+        label: 'ebussola.controlmybudget::lang.plugin.name'
+        url: ebussola/controlmybudget/purchases
+        icon: icon-money
+        permissions:
+            - 'cmb.*'
+        sideMenu:
+            cmb-purchases:
+                label: 'ebussola.controlmybudget::lang.model.purchase.label-plural'
+                url: ebussola/controlmybudget/purchases
+                icon: icon-arrow-down
+                permissions:
+                    - cmb.purchase

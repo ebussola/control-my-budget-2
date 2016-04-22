@@ -1,0 +1,10 @@
+name: Purchases
+form: $/ebussola/controlmybudget/models/purchase/fields.yaml
+modelClass: Ebussola\ControlMyBudget\Models\Purchase
+defaultRedirect: ebussola/controlmybudget/purchases
+create:
+    redirect: 'ebussola/controlmybudget/purchases/update/:id'
+    redirectClose: ebussola/controlmybudget/purchases
+update:
+    redirect: ebussola/controlmybudget/purchases
+    redirectClose: ebussola/controlmybudget/purchases

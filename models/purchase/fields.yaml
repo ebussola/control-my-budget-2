@@ -1,0 +1,17 @@
+fields:
+    date:
+        label: 'ebussola.controlmybudget::lang.model.purchase.date.label'
+        oc.commentPosition: ''
+        mode: datetime
+        span: full
+        type: datepicker
+    place:
+        label: 'ebussola.controlmybudget::lang.model.purchase.place.label'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    amount:
+        label: 'ebussola.controlmybudget::lang.model.purchase.amount.label'
+        oc.commentPosition: ''
+        span: auto
+        type: number

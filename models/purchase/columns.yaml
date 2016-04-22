@@ -1,0 +1,13 @@
+columns:
+    date:
+        label: 'ebussola.controlmybudget::lang.model.purchase.date.label'
+        type: datetime
+        searchable: false
+        sortable: true
+    place:
+        label: 'ebussola.controlmybudget::lang.model.purchase.place.label'
+        type: text
+        searchable: true
+    amount:
+        label: 'ebussola.controlmybudget::lang.model.purchase.amount.label'
+        type: text
