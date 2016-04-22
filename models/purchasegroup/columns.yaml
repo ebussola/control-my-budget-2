@@ -1,0 +1,9 @@
+columns:
+    name:
+        label: 'ebussola.controlmybudget::lang.model.purchase-group.name.label'
+        type: text
+        searchable: true
+    created_at:
+        label: 'ebussola.controlmybudget::lang.model.purchase.created_at.label'
+        type: datetime
+        sortable: true

@@ -18,9 +18,9 @@ class BuilderTableCreateEbussolaControlmybudgetPurchases extends Migration
             $table->decimal('amount', 10, 0);
             $table->boolean('is_forecast');
             $table->integer('user_id')->nullable()->unsigned();
-            $table->integer('group_id')->nullable()->unsigned();
+            $table->integer('purchase_group_id')->nullable()->unsigned();
 
-            $table->unique(['date', 'place', 'amount', 'user_id', 'group_id']);
+            $table->unique(['date', 'place', 'amount', 'user_id', 'purchase_group_id']);
         });
     }
     

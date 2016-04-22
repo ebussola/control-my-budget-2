@@ -19,6 +19,10 @@ class Purchase extends Model
      * Validation
      */
     public $rules = [
+        'date' => 'required|date',
+        'place' => 'required',
+        'amount' => 'required|numeric',
+        'is_forecast' => 'boolean'
     ];
 
     /**
@@ -38,14 +42,21 @@ class Purchase extends Model
         'is_forecast'
     ];
 
+    /**
+     * protected $belongsTo = [
+     *     'parent' => ['Category', 'key' => 'parent_id']
+     * ];
+     */
+    public $belongsTo = [
+        'purchase_group' => ['\Ebussola\ControlMyBudget\Models\PurchaseGroup']
+    ];
+
     protected static function boot()
     {
         parent::boot();
 
         self::saving(function($self) {
-            if ($self->date->isFuture()) {
-                $self->is_future = true;
-            }
+            $self->is_forecast = $self->date->isFuture();
         });
     }
 

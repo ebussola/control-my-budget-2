@@ -1,0 +1,10 @@
+name: PurchaseGroups
+form: $/ebussola/controlmybudget/models/purchasegroup/fields.yaml
+modelClass: Ebussola\ControlMyBudget\Models\PurchaseGroup
+defaultRedirect: ebussola/controlmybudget/purchasegroups
+create:
+    redirect: 'ebussola/controlmybudget/purchasegroups/update/:id'
+    redirectClose: ebussola/controlmybudget/purchasegroups
+update:
+    redirect: ebussola/controlmybudget/purchasegroups
+    redirectClose: ebussola/controlmybudget/purchasegroups

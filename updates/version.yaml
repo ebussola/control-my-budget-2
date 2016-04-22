@@ -9,3 +9,12 @@
 1.0.4:
     - 'Created table ebussola_controlmybudget_period_goal'
     - builder_table_create_ebussola_controlmybudget_period_goal.php
+1.0.5:
+    - 'Created table ebussola_controlmybudget_purchase_groups'
+    - builder_table_create_ebussola_controlmybudget_purchase_groups.php
+1.0.6:
+    - 'Created table ebussola_controlmybudget_purchase_groups_users'
+    - builder_table_create_ebussola_controlmybudget_purchase_groups_users.php
+1.0.7:
+    - 'Added foreign key to purchase group'
+    - migration107.php

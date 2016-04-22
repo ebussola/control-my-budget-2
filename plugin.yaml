@@ -6,8 +6,11 @@ plugin:
     homepage: ''
 permissions:
     cmb.purchase:
-        tab: test
-        label: Bla
+        tab: 'ebussola.controlmybudget::lang.permission.tab'
+        label: 'ebussola.controlmybudget::lang.permission.purchase'
+    cmb.purchase-group:
+        tab: 'ebussola.controlmybudget::lang.permission.tab'
+        label: 'ebussola.controlmybudget::lang.permission.purchase-group'
 navigation:
     cmb:
         label: 'ebussola.controlmybudget::lang.plugin.name'
@@ -22,3 +25,9 @@ navigation:
                 icon: icon-arrow-down
                 permissions:
                     - cmb.purchase
+            purchase-groups:
+                label: 'ebussola.controlmybudget::lang.purchase-group.label.plural'
+                url: ebussola/controlmybudget/purchasegroups
+                icon: icon-group
+                permissions:
+                    - cmb.purchase-group

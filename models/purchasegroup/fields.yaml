@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'ebussola.controlmybudget::lang.model.purchase-group.name.label'
+        span: full
+        oc.commentPosition: ''
+        type: text
+    users:
+        label: 'ebussola.controlmybudget::lang.model.purchase-group.users.label'
+        span: full
+        oc.commentPosition: ''
+        nameFrom: full_name
+        descriptionFrom: email
+        type: relation
