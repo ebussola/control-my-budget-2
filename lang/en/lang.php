@@ -27,11 +27,26 @@
                 'label' => 'Users',
             ],
         ],
+        'monthlygoal' => [
+            'month' => [
+                'label' => 'Month',
+            ],
+            'year' => [
+                'label' => 'Year',
+            ],
+            'amount_goal' => [
+                'label' => 'Amount',
+            ],
+            'label' => [
+                'plural' => 'Monthly Goals',
+            ],
+        ],
     ],
     'permission' => [
         'tab' => 'Control My Budget',
         'purchase' => 'Manage Purchases',
         'purchase-group' => 'Manage Purchase groups',
+        'monthlygoal' => 'Manage Monthly Goal',
     ],
     'purchase-group' => [
         'label' => [

@@ -1,0 +1,10 @@
+name: MonthlyGoals
+form: $/ebussola/controlmybudget/models/monthlygoal/fields.yaml
+modelClass: Ebussola\ControlMyBudget\Models\MonthlyGoal
+defaultRedirect: ebussola/controlmybudget/monthlygoals
+create:
+    redirect: 'ebussola/controlmybudget/monthlygoals/update/:id'
+    redirectClose: ebussola/controlmybudget/monthlygoals
+update:
+    redirect: ebussola/controlmybudget/monthlygoals
+    redirectClose: ebussola/controlmybudget/monthlygoals

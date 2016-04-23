@@ -1,0 +1,16 @@
+fields:
+    month:
+        label: 'ebussola.controlmybudget::lang.model.monthlygoal.month.label'
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    year:
+        label: 'ebussola.controlmybudget::lang.model.monthlygoal.year.label'
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    amount_goal:
+        label: 'ebussola.controlmybudget::lang.model.monthlygoal.amount_goal.label'
+        span: full
+        oc.commentPosition: ''
+        type: number

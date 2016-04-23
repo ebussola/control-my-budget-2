@@ -11,6 +11,9 @@ permissions:
     cmb.purchase-group:
         tab: 'ebussola.controlmybudget::lang.permission.tab'
         label: 'ebussola.controlmybudget::lang.permission.purchase-group'
+    cmb.monthlygoal:
+        tab: 'ebussola.controlmybudget::lang.permission.tab'
+        label: 'ebussola.controlmybudget::lang.permission.monthlygoal'
 navigation:
     cmb:
         label: 'ebussola.controlmybudget::lang.plugin.name'
@@ -22,7 +25,7 @@ navigation:
             cmb-purchases:
                 label: 'ebussola.controlmybudget::lang.model.purchase.label-plural'
                 url: ebussola/controlmybudget/purchases
-                icon: icon-arrow-down
+                icon: icon-dollar
                 permissions:
                     - cmb.purchase
             purchase-groups:
@@ -31,3 +34,9 @@ navigation:
                 icon: icon-group
                 permissions:
                     - cmb.purchase-group
+            monthlygoal:
+                label: 'ebussola.controlmybudget::lang.model.monthlygoal.label.plural'
+                url: ebussola/controlmybudget/monthlygoals
+                icon: icon-calendar
+                permissions:
+                    - cmb.monthlygoal

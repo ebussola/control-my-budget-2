@@ -1,0 +1,12 @@
+columns:
+    month:
+        label: 'ebussola.controlmybudget::lang.model.monthlygoal.month.label'
+        type: number
+        sortable: true
+    year:
+        label: 'ebussola.controlmybudget::lang.model.monthlygoal.year.label'
+        type: number
+        sortable: true
+    amount_goal:
+        label: 'ebussola.controlmybudget::lang.model.monthlygoal.amount_goal.label'
+        type: number
