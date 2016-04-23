@@ -40,6 +40,7 @@
             'label' => [
                 'plural' => 'Monthly Goals',
             ],
+            'year_month' => 'Year - Month',
         ],
     ],
     'permission' => [

@@ -4,6 +4,9 @@ list: $/ebussola/controlmybudget/models/monthlygoal/columns.yaml
 recordUrl: 'ebussola/controlmybudget/monthlygoals/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
+defaultSort:
+    column: year_month
+    direction: desc
 toolbar:
     buttons: list_toolbar
     search:

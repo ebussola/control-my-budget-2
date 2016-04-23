@@ -13,9 +13,9 @@ class MonthlyGoal extends Model
      * Validation
      */
     public $rules = [
-        'month' => 'required|number',
-        'year' => 'required|number',
-        'amount_goal' => 'required|number'
+        'month' => 'required|numeric',
+        'year' => 'required|numeric',
+        'amount_goal' => 'required|numeric'
     ];
 
     /**
@@ -33,5 +33,10 @@ class MonthlyGoal extends Model
      * @var string The database table used by the model.
      */
     public $table = 'ebussola_controlmybudget_monthly_goal';
+
+    public function getYearMonthAttribute()
+    {
+        return $this->year. '-' .$this->month;
+    }
 
 }
