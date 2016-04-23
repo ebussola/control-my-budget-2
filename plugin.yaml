@@ -14,6 +14,9 @@ permissions:
     cmb.monthlygoal:
         tab: 'ebussola.controlmybudget::lang.permission.tab'
         label: 'ebussola.controlmybudget::lang.permission.monthlygoal'
+    cmb.periodgoal:
+        tab: 'ebussola.controlmybudget::lang.permission.tab'
+        label: 'ebussola.controlmybudget::lang.permission.periodgoal'
 navigation:
     cmb:
         label: 'ebussola.controlmybudget::lang.plugin.name'
@@ -40,3 +43,9 @@ navigation:
                 icon: icon-calendar
                 permissions:
                     - cmb.monthlygoal
+            periodgoal:
+                label: 'ebussola.controlmybudget::lang.model.periodgoal.label.plural'
+                url: ebussola/controlmybudget/periodgoals
+                icon: icon-calendar-o
+                permissions:
+                    - cmb.periodgoal

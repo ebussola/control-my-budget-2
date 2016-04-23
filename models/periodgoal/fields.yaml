@@ -1,0 +1,23 @@
+fields:
+    name:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.name.label'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    amount_goal:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.amount_goal.label'
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    date_start:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.date_start.label'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        type: datepicker
+    date_end:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.date_end.label'
+        span: auto
+        oc.commentPosition: ''
+        mode: date
+        type: datepicker

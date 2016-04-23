@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.name.label'
+        type: text
+        searchable: true
+    date_start:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.date_start.label'
+        type: date
+        sortable: true
+    date_end:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.date_end.label'
+        type: date
+        sortable: true
+    amount_goal:
+        label: 'ebussola.controlmybudget::lang.model.periodgoal.amount_goal.label'
+        type: number

@@ -1,0 +1,10 @@
+name: PeriodGoals
+form: $/ebussola/controlmybudget/models/periodgoal/fields.yaml
+modelClass: Ebussola\ControlMyBudget\Models\PeriodGoal
+defaultRedirect: ebussola/controlmybudget/periodgoals
+create:
+    redirect: 'ebussola/controlmybudget/periodgoals/update/:id'
+    redirectClose: ebussola/controlmybudget/periodgoals
+update:
+    redirect: ebussola/controlmybudget/periodgoals
+    redirectClose: ebussola/controlmybudget/periodgoals

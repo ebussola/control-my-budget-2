@@ -42,12 +42,30 @@
             ],
             'year_month' => 'Year - Month',
         ],
+        'periodgoal' => [
+            'name' => [
+                'label' => 'Name',
+            ],
+            'amount_goal' => [
+                'label' => 'Amount',
+            ],
+            'date_start' => [
+                'label' => 'Start Date',
+            ],
+            'date_end' => [
+                'label' => 'End Date',
+            ],
+            'label' => [
+                'plural' => 'Period Goals',
+            ],
+        ],
     ],
     'permission' => [
         'tab' => 'Control My Budget',
         'purchase' => 'Manage Purchases',
         'purchase-group' => 'Manage Purchase groups',
         'monthlygoal' => 'Manage Monthly Goal',
+        'periodgoal' => 'Manage Period Goal',
     ],
     'purchase-group' => [
         'label' => [
