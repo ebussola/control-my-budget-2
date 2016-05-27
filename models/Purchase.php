@@ -2,6 +2,7 @@
 
 use Carbon\Carbon;
 use Model;
+use October\Rain\Database\Builder;
 
 /**
  * Model
@@ -20,9 +21,11 @@ class Purchase extends Model
      */
     public $rules = [
         'date' => 'required|date',
-        'place' => 'required',
+        'place' => 'required|string',
         'amount' => 'required|numeric',
-        'is_forecast' => 'boolean'
+        'is_forecast' => 'boolean',
+        'user_id' => 'exists:backend_users,id',
+        'purchase_group_id' => 'exists:ebussola_controlmybudget_purchase_groups,id'
     ];
 
     /**
@@ -48,7 +51,8 @@ class Purchase extends Model
      * ];
      */
     public $belongsTo = [
-        'purchase_group' => ['\Ebussola\ControlMyBudget\Models\PurchaseGroup']
+        'purchase_group' => ['\Ebussola\ControlMyBudget\Models\PurchaseGroup'],
+        'user' => ['\Backend\Models\User']
     ];
 
     protected static function boot()
@@ -56,19 +60,33 @@ class Purchase extends Model
         parent::boot();
 
         self::saving(function($self) {
+            if ($self->purchase_group == null) {
+                $self->user = \BackendAuth::getUser();
+            }
+            else {
+                $self->user = null;
+            }
+
             $self->is_forecast = $self->date->isFuture();
         });
     }
 
-    public function scopeByPeriod($query, $start, $end, $userId = null)
+    public function scopeCurrentUser(Builder $query)
     {
-        $userId = $userId === null ? \BackendAuth::getUser()->id : $userId;
+        $query->where('user_id', \BackendAuth::getUser()->id);
+    }
 
+    public function scopeByDatePeriod(Builder $query, $start, $end)
+    {
         $query
-            ->where('date', '>=', $start)
-            ->where('date', '<=', $end)
-            ->where('user_id', $userId)
+            ->where(\DB::raw('date(date)'), '>=', $start)
+            ->where(\DB::raw('date(date)'), '<=', $end)
         ;
+    }
+
+    public function scopeOnlyForecasts(Builder $query)
+    {
+        $query->where('is_forecast', true);
     }
 
 

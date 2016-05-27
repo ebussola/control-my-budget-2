@@ -17,7 +17,9 @@ fields:
         type: number
     purchase_group:
         label: 'ebussola.controlmybudget::lang.purchase.purchase_group.label'
-        span: full
         oc.commentPosition: ''
         nameFrom: name
+        descriptionFrom: description
+        span: full
         type: relation
+        emptyOption: None

@@ -36,4 +36,14 @@ class Purchases extends Controller
         return $model;
     }
 
+    /**
+     * Controller override: Extend the query used for populating the list
+     * after the default query is processed.
+     * @param \October\Rain\Database\Builder $query
+     */
+    public function listExtendQuery($query, $definition = null)
+    {
+        $query->currentUser();
+    }
+
 }

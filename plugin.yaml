@@ -17,6 +17,9 @@ permissions:
     cmb.periodgoal:
         tab: 'ebussola.controlmybudget::lang.permission.tab'
         label: 'ebussola.controlmybudget::lang.permission.periodgoal'
+    cmb.report.dailybudget:
+        tab: 'ebussola.controlmybudget::lang.permission.tab'
+        label: 'ebussola.controlmybudget::lang.permission.report.dailybudget'
 navigation:
     cmb:
         label: 'ebussola.controlmybudget::lang.plugin.name'
@@ -49,3 +52,16 @@ navigation:
                 icon: icon-calendar-o
                 permissions:
                     - cmb.periodgoal
+    cmb-report:
+        label: 'Budget Reports'
+        url: ebussola/controlmybudget/reportdailybudget
+        icon: icon-pie-chart
+        permissions:
+            - 'cmb.report.*'
+        sideMenu:
+            cmb-dailybudget:
+                label: 'Daily Budget'
+                url: ebussola/controlmybudget/reportdailybudget
+                icon: icon-calendar-o
+                permissions:
+                    - cmb.report.dailybudget

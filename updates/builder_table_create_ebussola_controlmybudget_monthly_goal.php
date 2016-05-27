@@ -15,6 +15,11 @@ class BuilderTableCreateEbussolaControlmybudgetMonthlyGoal extends Migration
             $table->integer('month');
             $table->integer('year');
             $table->decimal('amount_goal', 10, 0);
+            $table->integer('user_id')->unsigned();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('backend_users');
 
             $table->timestamps();
         });

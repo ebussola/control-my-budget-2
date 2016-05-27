@@ -66,6 +66,9 @@
         'purchase-group' => 'Manage Purchase groups',
         'monthlygoal' => 'Manage Monthly Goal',
         'periodgoal' => 'Manage Period Goal',
+        'report' => [
+            'dailybudget' => 'Access Daily Budget Report',
+        ],
     ],
     'purchase-group' => [
         'label' => [
