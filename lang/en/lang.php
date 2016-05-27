@@ -86,6 +86,16 @@
             'available' => 'Available today',
             'total' => 'Total',
             'spent' => 'Spent',
+            'property' => [
+                'current_date' => [
+                    'label' => 'Simulate Date',
+                    'description' => 'Enter any future date to simulate how much you have this day',
+                ],
+                'manual_spent' => [
+                    'label' => 'Simulate an amount spent',
+                    'description' => 'Enter a value to simulate any value spent',
+                ],
+            ],
         ],
     ],
 ];

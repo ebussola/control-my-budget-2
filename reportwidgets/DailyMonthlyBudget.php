@@ -27,13 +27,13 @@ class DailyMonthlyBudget extends ReportWidgetBase
     {
         return [
             'current_date' => [
-                'title' => _('ebussola.controlmybudget::lang.widget.daily-monthly-budget.property.current_date.label'),
-                'description' => _('ebussola.controlmybudget::lang.widget.daily-monthly-budget.property.current_date.description'),
+                'title' => _('ebussola.controlmybudget::lang.reports.daily_monthly.property.current_date.label'),
+                'description' => _('ebussola.controlmybudget::lang.reports.daily_monthly.property.current_date.description'),
                 'type' => 'string'
             ],
             'manual_spent' => [
-                'title' => _('asdf'),
-                'description' => _('fdsa'),
+                'title' => _('ebussola.controlmybudget::lang.reports.daily_monthly.property.manual_spent.label'),
+                'description' => _('ebussola.controlmybudget::lang.reports.daily_monthly.property.manual_spent.description'),
                 'type' => 'string'
             ]
         ];
@@ -85,7 +85,7 @@ class DailyMonthlyBudget extends ReportWidgetBase
         if (preg_match('/....-..-../', $currentDate)) {
             return $currentDate;
         }
-        else if ($currentDate === null) {
+        else if ($currentDate == null) {
             return Carbon::now()->format('Y-m-d');
         }
         else {
@@ -102,9 +102,9 @@ class DailyMonthlyBudget extends ReportWidgetBase
      */
     protected function processDailyBudget($events=[], $manualSpent, $goal)
     {
-        $yesterday = clone new \DateTime($this->getCurrentDateProperty());
+        $yesterday = new \DateTime($this->getCurrentDateProperty());
         $yesterday->modify('-1 day');
-        $tomorrow = clone new \DateTime($this->getCurrentDateProperty());
+        $tomorrow = new \DateTime($this->getCurrentDateProperty());
         $tomorrow->modify('+1 day');
 
         $forecastAmountToday = Purchase::query()
@@ -116,12 +116,12 @@ class DailyMonthlyBudget extends ReportWidgetBase
         $spent =
             Purchase::query()
                 ->currentUser()
-                ->byDatePeriod($goal->date_start->format('Y-m-d'), $yesterday->format('Y-m-d'))
+                ->byDatePeriod($yesterday->format('Y-m-d'), $this->getCurrentDateProperty())
                 ->sum('amount')
             +
             Purchase::query()
                 ->currentUser()
-                ->byDatePeriod($tomorrow->format('Y-m-d'), $goal->date_end->format('Y-m-d'))
+                ->byDatePeriod($this->getCurrentDateProperty(), $tomorrow->format('Y-m-d'))
                 ->sum('amount')
             +
             $forecastAmountToday;
