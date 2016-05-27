@@ -1,0 +1,14 @@
+<div class="report-widget">
+    <h3><?= trans('ebussola.controlmybudget::lang.reports.daily_monthly.title')?></h3>
+
+    <div class="control-chart centered wrap-legend"
+         data-control="chart-pie"
+         data-size="<?= $dailyBudget['total']?>"
+         data-center-text="<?= $dailyBudget['available']?>"
+    >
+        <ul>
+            <li><?= trans('ebussola.controlmybudget::lang.reports.daily_monthly.total')?><span><?= $dailyBudget['total']?></span></li>
+            <li><?= trans('ebussola.controlmybudget::lang.reports.daily_monthly.spent')?><span><?= $dailyBudget['spent']?></span></li>
+        </ul>
+    </div>
+</div>

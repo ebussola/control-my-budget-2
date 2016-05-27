@@ -80,4 +80,12 @@
             'label' => 'Purchase Group',
         ],
     ],
+    'reports' => [
+        'daily_monthly' => [
+            'title' => 'Your Available Daily Budget',
+            'available' => 'Available today',
+            'total' => 'Total',
+            'spent' => 'Spent',
+        ],
+    ],
 ];
